@@ -13,11 +13,13 @@
 :root {
   --primary-color: white;
   --button-color: #3bc6e4;
+  --button-color-500: #0ad0fd;
+  --button-color-100: #3bc5e435;
   --b-100: rgba(0, 0, 0, 0.241);
   --width: min(1000px, 100%);
   --padding: 20px;
 }
 
 .dark {
-  --dark-mode: black;
+  --primary-color: rgba(0, 0, 0, 0.877);
 }

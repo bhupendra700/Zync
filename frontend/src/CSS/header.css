@@ -1,3 +1,6 @@
+header {
+  background-color: var(--primary-color);
+}
 header > section {
   display: flex;
   flex-direction: row;
@@ -6,6 +9,7 @@ header > section {
   gap: 10px;
   width: var(--width);
   padding: 10px var(--padding);
+  margin: 0 auto;
 }
 header > section > .left {
   display: flex;
@@ -35,7 +39,7 @@ header > section > .left > div:last-child {
   font-size: 25px;
 }
 header > section > .right {
-  width: min(150px, 100%);
+  width: min(100px, 100%);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -48,13 +52,64 @@ header > section > .right > div:first-child {
   justify-content: center;
   align-items: center;
   gap: 0;
+  padding: 5px;
   font-size: 30px;
   cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.12s linear;
 }
-header > section > .right > div:nth-child(2) {
+header > section > .right > div:first-child.click {
+  background-color: var(--button-color-100);
+  color: var(--button-color-500);
+}
+header > section > .right > div:first-child:hover {
+  background-color: var(--button-color-100);
+  color: var(--button-color-500);
+}
+header > section > .right > details {
+  position: relative;
+}
+header > section > .right > details[open] > summary {
+  background-color: var(--button-color-100);
+  color: var(--button-color-500);
+}
+header > section > .right > details > summary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 5px;
+  transition: all 0.12s linear;
+  font-weight: 700;
+}
+header > section > .right > details > summary:hover {
+  background-color: var(--button-color-100);
+  color: var(--button-color-500);
+}
+header > section > .right > details > div {
+  position: absolute;
+  right: 15px;
+  top: 40px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: max(200px, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+header > section > .right > details > div > div:first-child {
   background-color: aqua;
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
   display: flex;
   flex-direction: row;
@@ -63,19 +118,79 @@ header > section > .right > div:nth-child(2) {
   gap: 0;
   overflow: hidden;
 }
-header > section > .right > div:nth-child(2) > img {
+header > section > .right > details > div > div:first-child > img {
   height: 100%;
   width: 100%;
 }
-header > section > .right > div:last-child {
+header > section > .right > details > div > div:last-child {
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0;
-  font-size: 30px;
+  gap: 10px;
+}
+header > section > .right > details > div > div:last-child > button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: start;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 0.12s linear;
+}
+header > section > .right > details > div > div:last-child > button:not(:last-child) {
   cursor: pointer;
 }
-header > section > .right > div:last-child:hover {
-  color: var(--button-color);
+header > section > .right > details > div > div:last-child > button:hover:not(:last-child) {
+  background-color: var(--button-color-100);
+  color: var(--button-color-500);
+}
+header > section > .right > details > div > div:last-child > button:last-child {
+  padding: 0 5px;
+}
+header > section > .right > details > div > div:last-child > button:last-child > label {
+  width: 50px;
+  height: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 200px;
+  cursor: pointer;
+  border: 1px solid var(--button-color);
+  position: relative;
+}
+header > section > .right > details > div > div:last-child > button:last-child > label::after {
+  transition: all 0.12s linear;
+  left: 2px;
+  position: absolute;
+  content: "\f1bf";
+  font-family: "remixicon";
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 2px;
+  font-size: 18px;
+  font-weight: 550;
+  background-color: var(--button-color-100);
+  color: var(--button-color-500);
+}
+header > section > .right > details > div > div:last-child > button:last-child > label:has(input[type=checkbox]:checked)::after {
+  content: "\ef75";
+  transform: translate(22px);
+}
+header > section > .right > details > div > div:last-child > button:last-child > label > input[type=checkbox] {
+  appearance: none;
 }
