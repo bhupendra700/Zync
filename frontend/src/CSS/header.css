@@ -1,0 +1,81 @@
+header > section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: var(--width);
+  padding: 10px var(--padding);
+}
+header > section > .left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+header > section > .left > div:first-child {
+  background-color: aqua;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+header > section > .left > div:first-child > img {
+  height: 100%;
+  width: 100%;
+}
+header > section > .left > div:last-child {
+  color: var(--button-color);
+  font-weight: 600;
+  font-size: 25px;
+}
+header > section > .right {
+  width: min(150px, 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+header > section > .right > div:first-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  font-size: 30px;
+  cursor: pointer;
+}
+header > section > .right > div:nth-child(2) {
+  background-color: aqua;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  overflow: hidden;
+}
+header > section > .right > div:nth-child(2) > img {
+  height: 100%;
+  width: 100%;
+}
+header > section > .right > div:last-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  font-size: 30px;
+  cursor: pointer;
+}
+header > section > .right > div:last-child:hover {
+  color: var(--button-color);
+}

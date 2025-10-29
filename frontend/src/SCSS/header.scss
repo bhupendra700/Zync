@@ -1,0 +1,74 @@
+@use "mixins";
+
+header {
+    // background-color: var(--button-color);
+
+    &>section {
+        @include mixins.dynamic-flex(row, 10px, space-between, center);
+        width: var(--width);
+        padding: 10px var(--padding);
+
+        &>.left {
+            // background-color: red;
+            @include mixins.flex-center(row, 5px);
+
+            &>div:first-child {
+                background-color: aqua;
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                @include mixins.flex-center(row, 0);
+
+                &>img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            &>div:last-child {
+                color: var(--button-color);
+                font-weight: 600;
+                font-size: 25px;
+            }
+        }
+
+        &>.right {
+            // background-color: red;
+            width: min(150px , 100%);
+            @include mixins.dynamic-flex(row, 10px , space-between , center);
+
+            &>div:first-child {
+                // background-color: aqua;
+                @include mixins.flex-center(row, 0);
+                font-size: 30px;
+                cursor: pointer;
+            }
+
+            &>div:nth-child(2) {
+                background-color: aqua;
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                @include mixins.flex-center(row, 0);
+                overflow: hidden;
+
+                &>img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            &>div:last-child {
+                // background-color: aqua;
+                @include mixins.flex-center(row, 0);
+                font-size: 30px;
+                cursor: pointer;
+
+                &:hover{
+                    color: var(--button-color);
+                }
+            }
+
+        }
+    }
+}
