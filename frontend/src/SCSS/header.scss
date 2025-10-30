@@ -1,7 +1,7 @@
 @use "mixins";
 
 header {
-    background-color: var(--fourth-color);    
+    background-color: var(--fourth-color);
 
     &>section {
         @include mixins.dynamic-flex(row, 10px, space-between, center);
@@ -180,6 +180,27 @@ header {
                     }
                 }
             }
+        }
+    }
+
+    &>.profile {
+        background-color: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100dvw;
+        height: 100dvh;
+
+        &>div {
+            @include mixins.flex-center(column, 0);
+            transform: translate(50%, -50%);
+            margin: auto 0;
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            background-color: red;
+            padding: 10px;
+            border-radius: 10px;
         }
     }
 }

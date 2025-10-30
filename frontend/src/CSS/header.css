@@ -198,3 +198,26 @@ header > section > .right > details > div > div:last-child > button:last-child >
 header > section > .right > details > div > div:last-child > button:last-child > label > input[type=checkbox] {
   appearance: none;
 }
+header > .profile {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+}
+header > .profile > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  transform: translate(50%, -50%);
+  margin: auto 0;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+}

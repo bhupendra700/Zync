@@ -7,6 +7,7 @@ import { ImProfile } from "react-icons/im";
 import { GrInfo } from "react-icons/gr";
 import { useEffect, useRef, useState } from 'react';
 import useDetails from '../CustomeHook/useDetails';
+import { motion } from "framer-motion";
 
 
 const Header = () => {
@@ -18,7 +19,7 @@ const Header = () => {
     useEffect(() => {
         if (!document.body.hasAttribute("class")) {
             document.body.setAttribute("class", localStorage.getItem("theme") === "dark" ? "dark" : "");
-        }else{
+        } else {
             document.body.classList.toggle("dark");
         }
     }, [theme]);
@@ -55,6 +56,19 @@ const Header = () => {
                 </details>
             </div>
         </section>
+        <motion.div className='profile'>
+            <div>
+                <div>
+                    <img src={my} alt="profile pic" height={20} />
+                </div>
+                <div>
+                    Name : Bhupendra Yadav
+                </div>
+                <div>
+                    1234567890
+                </div>
+            </div>
+        </motion.div>
     </header>
 }
 
