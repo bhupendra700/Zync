@@ -11,15 +11,23 @@
 }
 
 :root {
+  /* --primary-color: white; */
   --primary-color: white;
-  --button-color: #3bc6e4;
-  --button-color-500: #0ad0fd;
+  --secondary-color : black;
+  --tertiary-color : white;
+  --fourth-color : #f8f1f1a5;
   --button-color-100: #3bc5e435;
-  --b-100: rgba(0, 0, 0, 0.241);
+  --button-color-500: #0ad0fd;
+  --button-color: #3bc6e4;
   --width: min(1000px, 100%);
   --padding: 20px;
+  --box-shadow : #00000029;
 }
 
 .dark {
-  --primary-color: rgba(0, 0, 0, 0.877);
+  --primary-color: #202020;
+  --secondary-color : white;
+  --tertiary-color : #303030;
+  --fourth-color : #202020;
+  --box-shadow : #ffffff58;
 }

@@ -5,10 +5,13 @@ import { MdOutlineQrCodeScanner } from "react-icons/md";
 import { CiMenuKebab } from "react-icons/ci";
 import { ImProfile } from "react-icons/im";
 import { GrInfo } from "react-icons/gr";
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import useDetails from '../CustomeHook/useDetails';
 
 
 const Header = () => {
+    const detailsRef = useRef(null);
+    useDetails(detailsRef)
 
     const [theme, setTheme] = useState(localStorage.getItem("theme") === "dark" ? true : false);
 
@@ -17,7 +20,7 @@ const Header = () => {
     }, [theme]);
 
     useEffect(() => {
-        document.body.setAttribute("class" , localStorage.getItem("theme") === "dark" ? "dark" : "");
+        document.body.setAttribute("class", localStorage.getItem("theme") === "dark" ? "dark" : "");
     }, []);
 
     return <header>
@@ -30,7 +33,7 @@ const Header = () => {
             </div>
             <div className='right'>
                 <div><MdOutlineQrCodeScanner /></div>
-                <details>
+                <details ref={detailsRef}>
                     <summary>
                         <CiMenuKebab />
                     </summary>

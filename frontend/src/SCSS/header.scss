@@ -1,7 +1,7 @@
 @use "mixins";
 
 header {
-    background-color: var(--primary-color);
+    background-color: var(--fourth-color);    
 
     &>section {
         @include mixins.dynamic-flex(row, 10px, space-between, center);
@@ -44,6 +44,7 @@ header {
                 cursor: pointer;
                 border-radius: 50%;
                 transition: all .12s linear;
+                color: var(--secondary-color);
 
                 &.click {
                     background-color: var(--button-color-100);
@@ -75,6 +76,7 @@ header {
                     padding: 5px;
                     transition: all .12s linear;
                     font-weight: 700;
+                    color: var(--secondary-color);
 
                     &:hover {
                         background-color: var(--button-color-100);
@@ -86,10 +88,10 @@ header {
                     position: absolute;
                     right: 15px;
                     top: 40px;
-                    background-color: white;
+                    background-color: var(--primary-color);
                     padding: 10px;
                     border-radius: 5px;
-                    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                    box-shadow: var(--box-shadow) 0px 1px 4px;
                     width: max(200px, 100%);
                     @include mixins.flex-center(column, 20px);
 
@@ -119,6 +121,7 @@ header {
                             font-weight: 400;
                             text-align: start;
                             width: 100%;
+                            color: var(--secondary-color);
 
                             &:not(:last-child) {
                                 cursor: pointer;
@@ -145,7 +148,8 @@ header {
                                 cursor: pointer;
                                 border: 1px solid var(--button-color);
                                 position: relative;
-                                
+                                background-color: var(--button-color-100);
+
                                 &::after {
                                     transition: all .12s linear;
                                     left: 2px;
@@ -162,7 +166,7 @@ header {
                                 }
 
                                 &:has(input[type="checkbox"]:checked) {
-                                    &::after{
+                                    &::after {
                                         content: "\EF75";
                                         transform: translate(22px);
                                     }

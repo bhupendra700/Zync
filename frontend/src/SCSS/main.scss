@@ -1,0 +1,11 @@
+main{
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
+    height: calc(100vh - 70px);
+    
+    &>section{
+        width: var(--width);
+        margin: 0 auto;
+        padding: 10px var(--padding);
+    }
+}
