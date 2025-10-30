@@ -16,12 +16,12 @@ const Header = () => {
     const [theme, setTheme] = useState(localStorage.getItem("theme") === "dark" ? true : false);
 
     useEffect(() => {
-        document.body.classList.toggle("dark");
+        if (!document.body.hasAttribute("class")) {
+            document.body.setAttribute("class", localStorage.getItem("theme") === "dark" ? "dark" : "");
+        }else{
+            document.body.classList.toggle("dark");
+        }
     }, [theme]);
-
-    useEffect(() => {
-        document.body.setAttribute("class", localStorage.getItem("theme") === "dark" ? "dark" : "");
-    }, []);
 
     return <header>
         <section>
