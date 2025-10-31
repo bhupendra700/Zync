@@ -8,7 +8,10 @@ import { GrInfo } from "react-icons/gr";
 import { useEffect, useRef, useState } from 'react';
 import useDetails from '../CustomeHook/useDetails';
 import { motion } from "framer-motion";
-
+import { FaEdit } from "react-icons/fa";
+import { FaRegImages } from "react-icons/fa6";
+import { IoIosArrowForward } from "react-icons/io";
+import { FaPhoneAlt } from "react-icons/fa";
 
 const Header = () => {
     const detailsRef = useRef(null);
@@ -56,19 +59,34 @@ const Header = () => {
                 </details>
             </div>
         </section>
-        <motion.div className='profile'>
-            <div>
+        {true && <div className='profile'>
+            <motion.div>
                 <div>
                     <img src={my} alt="profile pic" height={20} />
                 </div>
-                <div>
-                    Name : Bhupendra Yadav
-                </div>
-                <div>
-                    1234567890
-                </div>
-            </div>
-        </motion.div>
+                <button><FaRegImages /> Edit</button>
+                {true ? <div>
+                    <div><ImProfile /> Name</div>
+                    <div>Bhupendra Yadav <FaEdit className='name-edit-btn'/></div>
+                </div> :
+                    <div>
+                        <div><ImProfile /> Name</div>
+                        <div>
+                            <input type='text' placeholder='Enter name here' /> <IoIosArrowForward />
+                        </div>
+                    </div>}
+                {true ? <div>
+                    <div><FaPhoneAlt /> Phone number</div>
+                    <div>8999013942 <FaEdit className='name-edit-btn'/></div>
+                </div> :
+                    <div>
+                        <div><FaPhoneAlt /> Phone number</div>
+                        <div>
+                            <input type='number' placeholder='Enter name here' /> <IoIosArrowForward />
+                        </div>
+                    </div>}
+            </motion.div>
+        </div>}
     </header>
 }
 

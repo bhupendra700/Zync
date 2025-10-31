@@ -211,13 +211,117 @@ header > .profile > div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0;
+  gap: 30px;
   transform: translate(50%, -50%);
   margin: auto 0;
   position: absolute;
   top: 50%;
   right: 50%;
-  background-color: red;
-  padding: 10px;
+  background-color: var(--primary-color);
+  padding: 30px 10px;
   border-radius: 10px;
+  width: min(400px, 98%);
+  box-shadow: var(--box-shadow) 0px 1px 4px;
+}
+header > .profile > div > div:first-child {
+  background-color: var(--button-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+header > .profile > div > div:first-child > img {
+  height: 100%;
+  width: 100%;
+}
+header > .profile > div > button {
+  background-color: var(--button-color);
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+header > .profile > div > div:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+}
+header > .profile > div > div:nth-child(3) > div:first-child {
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: rgba(0, 0, 0, 0.6588235294);
+}
+header > .profile > div > div:nth-child(3) > div:last-child {
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: var(--secondary-color);
+}
+header > .profile > div > div:nth-child(3) > div:last-child > .name-edit-btn {
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  padding: 2px;
+  cursor: pointer;
+  transition: all 0.12s linear;
+}
+header > .profile > div > div:nth-child(3) > div:last-child > .name-edit-btn:hover {
+  background-color: var(--button-color);
+}
+header > .profile > div > div:nth-child(4) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+}
+header > .profile > div > div:nth-child(4) > div:first-child {
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: rgba(0, 0, 0, 0.6588235294);
+}
+header > .profile > div > div:nth-child(4) > div:last-child {
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: var(--secondary-color);
+}
+header > .profile > div > div:nth-child(4) > div:last-child > .name-edit-btn {
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  padding: 2px;
+  cursor: pointer;
+  transition: all 0.12s linear;
+}
+header > .profile > div > div:nth-child(4) > div:last-child > .name-edit-btn:hover {
+  background-color: var(--button-color);
 }

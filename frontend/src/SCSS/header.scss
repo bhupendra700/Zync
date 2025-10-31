@@ -192,15 +192,100 @@ header {
         height: 100dvh;
 
         &>div {
-            @include mixins.flex-center(column, 0);
+            @include mixins.flex-center(column, 30px);
             transform: translate(50%, -50%);
             margin: auto 0;
             position: absolute;
             top: 50%;
             right: 50%;
-            background-color: red;
-            padding: 10px;
+            background-color: var(--primary-color);
+            padding: 30px 10px;
             border-radius: 10px;
+            width: min(400px, 98%);
+            box-shadow: var(--box-shadow) 0px 1px 4px;
+
+            &>div:first-child {
+                background-color: var(--button-color);
+                @include mixins.flex-center(row, 0);
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                overflow: hidden;
+
+                &>img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            &>button {
+                background-color: var(--button-color);
+                border: none;
+                padding: 5px;
+                border-radius: 5px;
+                font-size: 16px;
+                @include mixins.flex-center(row, 10px);
+                cursor: pointer;
+                color: var(--primary-color);
+            }
+
+            &>div:nth-child(3) {
+                @include mixins.dynamic-flex(column, 10px, center, start);
+
+                &>div:first-child {
+                    font-size: 14px;
+                    @include mixins.flex-center(row, 5px);
+                    color: #000000a8;
+                }
+
+                &>div:last-child {
+                    font-size: 18px;
+                    @include mixins.flex-center(row, 20px);
+                    color: var(--secondary-color);
+
+                    &>.name-edit-btn {
+                        height: 20px;
+                        width: 20px;
+                        border-radius: 5px;
+                        padding: 2px;
+                        cursor: pointer;
+                        transition: all .12s linear;
+
+                        &:hover {
+                            background-color: var(--button-color);
+                        }
+                    }
+                }
+            }
+
+            &>div:nth-child(4) {
+                @include mixins.dynamic-flex(column, 10px, center, start);
+
+                &>div:first-child {
+                    font-size: 14px;
+                    @include mixins.flex-center(row, 5px);
+                    color: #000000a8;
+                }
+
+                &>div:last-child {
+                    font-size: 18px;
+                    @include mixins.flex-center(row, 20px);
+                    color: var(--secondary-color);
+
+                    &>.name-edit-btn {
+                        height: 20px;
+                        width: 20px;
+                        border-radius: 5px;
+                        padding: 2px;
+                        cursor: pointer;
+                        transition: all .12s linear;
+
+                        &:hover {
+                            background-color: var(--button-color);
+                        }
+                    }
+                }
+            }
         }
     }
 }
